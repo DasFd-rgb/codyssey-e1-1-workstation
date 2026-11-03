@@ -206,8 +206,8 @@ localhost:8081에서 웹페이지 접속과 파일 변경 반영을 확인했다
 - [x] 트러블슈팅 2건 기록
 - [x] 접속/마운트 비교 캡처를 저장소에 넣고 README에 연결
 - [x] Git 설정 확인 결과 기록
-- [ ] VS Code에서 Github 로그인 및 저장소 연동 확인
-- [ ] GitHub 업로드 및 제출 링크 확인
+- [x] VS Code에서 Github 로그인 및 저장소 연동 확인
+- [x] GitHub 업로드 및 제출 링크 확인
 
 ## 11. Git 설정 및 로컬 버전 관리
 
@@ -241,4 +241,6 @@ $ git log -1 --oneline
 
 Git은 로컬 변경 이력을 관리하고,
 GitHub는 저장소를 온라인에서 공유하고 협업하는 서비스다.
-현재 첫 커밋은 로컬에 저장했으며 GitHub 업로드는 아직 진행하지 않았다.
+VS Code에서 DasFd-rgb GitHub 로그인을 확인했다.
+origin에 과제 저장소 주소를 등록하고,
+git push -u origin main으로 두 커밋을 업로드했다.
