@@ -1,0 +1,222 @@
+제출 전 보조 재검증 | 기존 사용자 실습과 별도로 실행한 실제 명령 및 출력
+$ docker --version
+Docker version 29.9.2, build a82e528
+
+$ docker info --format 'Server={{.ServerVersion}} OS={{.OSType}}'
+Server=29.9.2 OS=linux
+
+$ docker images
+IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
+codyssey-web:1.0     99bedc201b5e       93.6MB         26.3MB   U    
+hello-world:latest   c567b231f656       25.9kB         9.49kB   U    
+ubuntu:24.04         fe81560990fa        119MB         31.7MB   U    
+
+$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED       STATUS                   PORTS                                     NAMES
+7d1de76276bf   ubuntu:24.04       "bash"                   2 hours ago   Up 2 hours                                                         codyssey-volume-2
+7e9bfeab1af1   codyssey-web:1.0   "/docker-entrypoint.…"   3 hours ago   Up 3 hours               0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   codyssey-bind
+1d7badf3dd8b   codyssey-web:1.0   "/docker-entrypoint.…"   3 hours ago   Up 3 hours               0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   codyssey-web-8080
+c594f9e7fbed   ubuntu:24.04       "bash"                   5 hours ago   Exited (0) 5 hours ago                                             codyssey-ubuntu
+564b37dc2bac   hello-world        "/hello"                 5 hours ago   Exited (0) 5 hours ago                                             codyssey-hello
+
+$ docker logs codyssey-hello
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+$ docker stats --no-stream codyssey-bind
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
+7e9bfeab1af1   codyssey-bind   0.00%     12.82MiB / 15.28GiB   0.08%     8.23kB / 6.58kB   5.67MB / 12.3kB   17
+
+$ curl -fsS http://localhost:8080
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1</p>
+</body>
+</html>
+
+$ curl -fsS http://localhost:8081
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 2 - 바인드 마운트 반영 확인</p>
+</body>
+</html>
+
+$ docker exec codyssey-volume-2 cat /data/hello.txt
+Codyssey volume test
+
+검증용 임시 사본의 버전 문구를 1로 설정. 원본 app/index.html은 변경하지 않음.
+$ docker build --progress=plain -t codyssey-e1-check:1793706701 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 89B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:alpine
+#2 ...
+
+#3 [auth] library/nginx:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:alpine
+#2 DONE 2.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/library/nginx:alpine@sha256:785835ea65db4bba6f021acc0f3be91b0fef76a53fe41f8588c6698d2aed0606
+#5 resolve docker.io/library/nginx:alpine@sha256:785835ea65db4bba6f021acc0f3be91b0fef76a53fe41f8588c6698d2aed0606 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 326B done
+#6 DONE 0.0s
+
+#7 [2/2] COPY app/ /usr/share/nginx/html/
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:3a21c808295b89ab8c76cf5e271ddb56d9294ae6a59da04b012fb54488442bdb done
+#8 exporting config sha256:3cd57d1a60da5a03c096ef0c7442ae45960db476cc19323e9f1f0fadcd1c9957 done
+#8 exporting attestation manifest sha256:25bc4fa32d0ec47a7bccdb82b9ffe6967fed2c080caaf07319523387d35e6441 0.0s done
+#8 exporting manifest list sha256:9667b61a4cdd0b53519ca92046d0500b3c74a64dd97ef4bea01e0b2e86343e8b 0.0s done
+#8 naming to docker.io/library/codyssey-e1-check:1793706701 done
+#8 unpacking to docker.io/library/codyssey-e1-check:1793706701 done
+#8 DONE 0.1s
+
+$ docker run -d --name e1-check-web-1793706701 -p 127.0.0.1:18080:80 codyssey-e1-check:1793706701
+6f9e8f5f6964e7978c11f1908ce0a72a0d555427af02285f38d18d2246b5fd6c
+
+$ docker run -d --name e1-check-bind-1793706701 -p 127.0.0.1:18081:80 --mount type=bind,source=/tmp/codyssey-e1-jxdlf1ml/app,target=/usr/share/nginx/html,readonly codyssey-e1-check:1793706701
+a07aa6c7d6f27719ea301af0d1dd469de1f5d1a0895659e32dac59d91b246dbc
+
+$ curl --retry 4 --retry-connrefused --retry-delay 1 -fsS http://localhost:18080
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1</p>
+</body>
+</html>
+
+$ curl --retry 4 --retry-connrefused --retry-delay 1 -fsS http://localhost:18081
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1</p>
+</body>
+</html>
+
+검증용 호스트 사본을 제출 원본의 버전 2로 변경.
+$ curl --retry 4 --retry-connrefused --retry-delay 1 -fsS http://localhost:18080
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1</p>
+</body>
+</html>
+
+$ curl --retry 4 --retry-connrefused --retry-delay 1 -fsS http://localhost:18081
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 2 - 바인드 마운트 반영 확인</p>
+</body>
+</html>
+
+$ docker volume create e1-check-data-1793706701
+e1-check-data-1793706701
+
+$ docker run -dit --name e1-check-vol1-1793706701 --mount type=volume,source=e1-check-data-1793706701,target=/data ubuntu:24.04 bash
+b2aed07c9145e74868b386d3cfe3ff0a7c67318d57271d6dc9a4f0843f11290a
+
+$ docker exec e1-check-vol1-1793706701 bash -c 'echo "Codyssey volume test" > /data/hello.txt'
+
+$ docker exec e1-check-vol1-1793706701 cat /data/hello.txt
+Codyssey volume test
+
+$ docker rm -f e1-check-vol1-1793706701
+e1-check-vol1-1793706701
+
+$ docker run -dit --name e1-check-vol2-1793706701 --mount type=volume,source=e1-check-data-1793706701,target=/data ubuntu:24.04 bash
+7471d56218c27f6418e89d5aeb2ace8ee15fcfbc3a2bb8b6dca4579f0b420c66
+
+$ docker exec e1-check-vol2-1793706701 cat /data/hello.txt
+Codyssey volume test
+
+PASS: 새 이미지 빌드, 두 포트 접속, 바인드 변경 전후, 컨테이너 삭제 후 볼륨 데이터 유지
+$ docker rm -f e1-check-web-1793706701
+e1-check-web-1793706701
+
+$ docker rm -f e1-check-bind-1793706701
+e1-check-bind-1793706701
+
+$ docker rm -f e1-check-vol2-1793706701
+e1-check-vol2-1793706701
+
+$ docker volume rm e1-check-data-1793706701
+e1-check-data-1793706701
+
+$ docker image rm codyssey-e1-check:1793706701
+Untagged: codyssey-e1-check:1793706701
+Deleted: sha256:9667b61a4cdd0b53519ca92046d0500b3c74a64dd97ef4bea01e0b2e86343e8b
+
