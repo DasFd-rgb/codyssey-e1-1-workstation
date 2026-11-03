@@ -1,0 +1,50 @@
+Script started on 2026-11-03 12:53:53+09:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ owd[K[K[Kpwd
+[?2004l/home/cedn2/codyssey-workshop
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ d[Kmk[K[Kmkdir d[K-pd[K pa[Kractice
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ cd[K[Kcd prac[Kctice
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ d[Ktouch p[Kep[Kmpty.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ c[Kecho d[K""[KHelo[Klo Codysse[Key" > original.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ d[Kcp original.txt copy.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ touch .hidden-example
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ ls -la
+[?2004ltotal 16
+drwxr-xr-x 2 cedn2 cedn2 4096 Nov  3 12:55 [0m[01;34m.[0m
+drwxr-xr-x 4 cedn2 cedn2 4096 Nov  3 12:54 [01;34m..[0m
+-rw-r--r-- 1 cedn2 cedn2    0 Nov  3 12:55 .hidden-example
+-rw-r--r-- 1 cedn2 cedn2   15 Nov  3 12:55 copy.txt
+-rw-r--r-- 1 cedn2 cedn2    0 Nov  3 12:55 empty.txt
+-rw-r--r-- 1 cedn2 cedn2   15 Nov  3 12:55 original.txt
+[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ cat original.txt
+[?2004lHello Codyssey
+[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ rm rename.txt
+[?2004lrm: cannot remove 'rename.txt': No such file or directory
+[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ re[K[Krm renam[K[Kamed.txt
+[?2004lrm: cannot remove 'renamed.txt': No such file or directory
+[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ mv copy [K.text[K[K[Kxt renamed.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ rm renamed.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ ls l[K-la
+[?2004ltotal 12
+drwxr-xr-x 2 cedn2 cedn2 4096 Nov  3 12:57 [0m[01;34m.[0m
+drwxr-xr-x 4 cedn2 cedn2 4096 Nov  3 12:54 [01;34m..[0m
+-rw-r--r-- 1 cedn2 cedn2    0 Nov  3 12:55 .hidden-example
+-rw-r--r-- 1 cedn2 cedn2    0 Nov  3 12:55 empty.txt
+-rw-r--r-- 1 cedn2 cedn2   15 Nov  3 12:55 original.txt
+[?2004h]0;cedn2@das: ~/codyssey-workshop/practice[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop/practice[00m$ cd . .[K[K.
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ cd ~/codysset[Ky-workshop
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ d[Kecho "permission pac[K[Kractice" > d[Kpractice/permission.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ mkdir -p practice/permission=[K-dir
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ c[Kchmod 600 prat[Kctice/permission.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ chmod 700 prctice[K[K[K[K[K[Kractice/permission-dir
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ ls ld-[K prac[K[K[K[K[K[K[K-ld pract[K[K[K[Kractice/permission.txt practice/permission-dir
+[?2004ldrwx------ 2 cedn2 cedn2 4096 Nov  3 12:59 [0m[01;34mpractice/permission-dir[0m
+-rw------- 1 cedn2 cedn2   20 Nov  3 12:59 practice/permission.txt
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ chmod 644 practice/permission.txt
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ chmod 5[K755 prc[Kaction[Kce[K[K[Kce/permission-dir
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ ls -ld practice/permisson[K[Kion.txt practice/permisi[Ksion-dir
+[?2004ldrwxr-xr-x 2 cedn2 cedn2 4096 Nov  3 12:59 [0m[01;34mpractice/permission-dir[0m
+-rw-r--r-- 1 cedn2 cedn2   20 Nov  3 12:59 practice/permission.txt
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-03 13:02:02+09:00 [COMMAND_EXIT_CODE="0"]

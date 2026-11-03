@@ -1,0 +1,248 @@
+Script started on 2026-11-03 15:22:52+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ c[Kod[K[Kdocker --version
+[?2004lDocker version 29.9.2, build a82e528
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker info
+[?2004lClient:
+ Version:    29.9.2
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.152.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.33.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.38.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.6.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.49.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  4.97.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.9
+    Path:     /usr/local/lib/docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.32
+    Path:     /usr/local/lib/docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.44.2
+    Path:     /usr/local/lib/docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.9
+    Path:     /usr/local/lib/docker/cli-plugins/docker-model
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.7.21
+    Path:     /usr/local/lib/docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.3.2
+    Path:     /usr/local/lib/docker/cli-plugins/docker-pass
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-sandbox
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.27.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.9.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: local
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: nvidia runc io.containerd.runc.v2
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc version: v1.5.2-0-g29dd3dc2
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.54.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 15.28GiB
+ Name: docker-desktop
+ ID: 79348351-3372-4151-9f30-b55c54299e50
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///var/run/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker run --name codd[Kyssey-e[Khello heel[K[Kllo-work[Kld
+[?2004lUnable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+
+[1A[2K4f55086f7dd0: Pulling fs layer [1B[1A[2K4f55086f7dd0: Download complete [1B[1A[2K4f55086f7dd0: Pull complete [1B
+[1A[2Kd5e71e642bf5: Download complete [1BDigest: sha256:c567b231f65614688711a75f31518a064258a51d442117a3e771a3a8fdba78ef
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker u[K[[Kpull ubuntu:25[K4.04
+[?2004l24.04: Pulling from library/ubuntu
+
+[1A[2K7a48b8f0e5c7: Pulling fs layer [1B[1A[2K7a48b8f0e5c7: Downloading [=>                                                 ]  1.049MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [===>                                               ]  2.097MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [===>                                               ]  2.097MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [=====>                                             ]  3.146MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [=====>                                             ]  3.146MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [=====>                                             ]  3.146MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [=====>                                             ]  3.146MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [=======>                                           ]  4.194MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [========>                                          ]  5.243MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [========>                                          ]  5.243MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [========>                                          ]  5.243MB/29.77MB[1B[1A[2K7a48b8f0e5c7: Downloading [==========>                                        ]  6.291MB/29.77MB[1B
+[1A[2K98144013299c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K7a48b8f0e5c7: Downloading [==========>                                        ]  6.291MB/29.77MB[2B[1A[2K98144013299c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K7a48b8f0e5c7: Downloading [============>                                      ]   7.34MB/29.77MB[2B[1A[2K98144013299c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K7a48b8f0e5c7: Downloading [============>                                      ]   7.34MB/29.77MB[2B[1A[2K98144013299c: Download complete [1B[2A[2K7a48b8f0e5c7: Downloading [==============>                                    ]  8.389MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============>                                   ]  9.437MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [=================>                                 ]  10.49MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===================>                               ]  11.53MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===================>                               ]  11.53MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [=====================>                             ]  12.58MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [======================>                            ]  13.63MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [======================>                            ]  13.63MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [========================>                          ]  14.68MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [==========================>                        ]  15.73MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [==========================>                        ]  15.73MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [==========================>                        ]  15.73MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [============================>                      ]  16.78MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [============================>                      ]  16.78MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [=============================>                     ]  17.83MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============================>                   ]  18.87MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [=================================>                 ]  19.92MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===================================>               ]  20.97MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [====================================>              ]  22.02MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [====================================>              ]  22.02MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [======================================>            ]  23.07MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [========================================>          ]  24.12MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [==========================================>        ]  25.17MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [============================================>      ]  26.21MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============================================>   ]  28.31MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============================================>   ]  28.31MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============================================>   ]  28.31MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [===============================================>   ]  28.31MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Downloading [=================================================> ]  29.36MB/29.77MB[2B[2A[2K7a48b8f0e5c7: Download complete [2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 1 s[2B[2A[2K7a48b8f0e5c7: Extracting 2 s[2B[2A[2K7a48b8f0e5c7: Extracting 2 s[2B[2A[2K7a48b8f0e5c7: Pull complete [2BDigest: sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
+Status: Downloaded newer image for ubuntu:24.04
+docker.io/library/ubuntu:24.04
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39mc567b231f656[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mubuntu:24.04[0m         [39mfe81560990fa[0m        [39m119MB[0m         [39m31.7MB[0m        
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker ps -a
+[?2004lCONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+564b37dc2bac   hello-world   "/hello"   40 seconds ago   Exited (0) 39 seconds ago             codyssey-hello
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker run -bit[K[K[Kdit --name codyse[Ksey-ubuntu ubuntu:24.04 bash
+[?2004lc594f9e7fbed0a84bf43b6147275517a5dd59a89b981f92400d05a68c14410b2
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker exec -it codyssey-ubuntu bash
+[?2004l[?2004h]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# ls
+[?2004l[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;36mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# echo "Hllo   ello from Ubuntu container"
+[?2004lHello from Ubuntu container
+[?2004h]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# [Ke eix  xit
+[?2004lexit
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND   CREATED              STATUS              PORTS     NAMES
+c594f9e7fbed   ubuntu:24.04   "bash"    About a minute ago   Up About a minute             codyssey-ubuntu
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker logs codyssey-hello
+[?2004l
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker stats --no-stream codyssey-ubuntu
+[?2004lCONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O    PIDS
+c594f9e7fbed   codyssey-ubuntu   0.00%     1.941MiB / 15.28GiB   0.01%     1.17kB / 126B   0B / 4.1kB   1
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ [K]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker stop coddy[K[Kyssey-ubuntu
+[?2004lcodyssey-ubuntu
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND    CREATED         STATUS                        PORTS     NAMES
+c594f9e7fbed   ubuntu:24.04   "bash"     3 minutes ago   Exited (137) 12 seconds ago             codyssey-ubuntu
+564b37dc2bac   hello-world    "/hello"   4 minutes ago   Exited (0) 4 minutes ago                codyssey-hello
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker start codyssey-ubuntu
+[?2004lcodyssey-ubuntu
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS     NAMES
+c594f9e7fbed   ubuntu:24.04   "bash"    3 minutes ago   Up 2 seconds             codyssey-ubuntu
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker attach codyssey-ubuntu
+[?2004l[K]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# [K]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# echo "Attached to the main shell"
+[?2004lAttached to the main shell
+[?2004h]0;root@c594f9e7fbed: /root@c594f9e7fbed:/# [Kexit
+[?2004lexit
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ docker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND    CREATED         STATUS                     PORTS     NAMES
+c594f9e7fbed   ubuntu:24.04   "bash"     4 minutes ago   Exited (0) 5 seconds ago             codyssey-ubuntu
+564b37dc2bac   hello-world    "/hello"   5 minutes ago   Exited (0) 5 minutes ago             codyssey-hello
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ cd ~/codyssey-worck[K[Kkshop
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ pwd
+[?2004l/home/cedn2/codyssey-workshop
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ mkdir -p app
+[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ nano app/int[Kdex.html
+[?2004l[?2004h[?1049h[22;0;0t[1;27r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[25;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 8.7.1                                        app/index.html                                                  [1;119H(B[m[26d(B[0;7m^G(B[m Help[26;16H(B[0;7m^O(B[m Write Out   (B[0;7m^F(B[m Where Is    (B[0;7m^K(B[m Cut[26;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[27d(B[0;7m^X(B[m Exit[27;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;72H(B[0;7m*[119G(B[m[?12l[?25h[2d,[?25l[?12l[?25h[K[?25l[?12l[?25h<[?25l[?12l[?25h![?25l[?12l[?25hd[?25l[?12l[?25ho[?25l[?12l[?25hc[?25l[?12l[?25ht[?25l[?12l[?25hy[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25hh[?25l[?12l[?25ht[?25l[?12l[?25hm[?25l[?12l[?25hl[?25l[?12l[?25h[36m<!doctype html>[39m(B[m[?25l[3d[?12l[?25h[?25l[?12l[?25h<[?25l[25d[K[?12l[?25h[3d<h[?25l[?12l[?25ht[?25l[?12l[?25hm[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hl[?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hg[?25l[?12l[?25h[31mlang=[39m(B[m[?25l[?12l[?25h"[?25l[?12l[?25hk[?25l[?12l[?25ho[?25l[?12l[?25h[32m"ko"[39m(B[m[?25l[?12l[?25h[36m<html [3;16H>[39m(B[m[?25l[4d[?12l[?25h[?25l[?12l[?25h<[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25ha[?25l[?12l[?25hd[?25l[?12l[?25h[36m<head>[39m(B[m[?25l[5d[?12l[?25h[?25l[?12l[?25h[5;9H[?25l[?12l[?25h<[?25l[?12l[?25he[?25l[?12l[?25h=[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25ha[?25l[?12l[?25h [?25l[?12l[?25hc[?25l[?12l[?25hh[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25h=[?25l[?12l[?25h"[?25l[?12l[?25hU[?25l[?12l[?25hT[?25l[?12l[?25hF[?25l[?12l[?25h-[?25l[?12l[?25h8[?25l[?12l[?25h[24G[32m"UTF-8"[39m(B[m[?25l[?12l[?25h[5;9H[36m<meta charset =[31G>[39m(B[m[?25l[6d[?12l[?25h[?25l[?12l[?25h[6;9H[?25l[?12l[?25h<[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h[9G[36m<title>[39m(B[m[?25l[?12l[?25hs[?25l[?12l[?25hk[?25l[?12l[?25hd[?25l[?12l[?25hm[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h나[?25l[?12l[?25h의[?25l[?12l[?25h [?25l[?12l[?25h작[?25l[?12l[?25h업[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h[K[?25l[?12l[?25h[K[?25l[?12l[?25h개[?25l[?12l[?25h발 [?25l[?12l[?25h작[?25l[?12l[?25h업[?25l[?12l[?25h실<[?25l[?12l[?25h/[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h[32G[36m</title>[39m(B[m[?25l[7d[?12l[?25h[?25l[?12l[?25hd[?25l[?12l[?25h[K[?25l[?12l[?25h<[?25l[?12l[?25h/[?25l[?12l[?25hh[?25l[?12l[?25he[?25l[?12l[?25ha[?25l[?12l[?25hd[?25l[?12l[?25h[36m</head>[39m(B[m[?25l[8d[?12l[?25h[?25l[?12l[?25h<[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hd[?25l[?12l[?25hy[?25l[?12l[?25h[36m<body>[39m(B[m[?25l[9d[?12l[?25h[?25l[?12l[?25h[9;9H[?25l[?12l[?25h<[?25l[?12l[?25hh[?25l[?12l[?25h1[?25l[?12l[?25h[36m<h1>[39m(B[m[?25l[?12l[?25h나[?25l[?12l[?25h의 [?25l[?12l[?25h코[?25l[?12l[?25h디[?25l[?12l[?25h세[?25l[?12l[?25h이 [?25l[?12l[?25h개[?25l[?12l[?25h발 [?25l[?12l[?25h작[?25l[?12l[?25h업[?25l[?12l[?25h실<[?25l[?12l[?25h/[?25l[?12l[?25hh[?25l[?12l[?25h1[?25l[?12l[?25h[36m</h1>[39m(B[m[?25l[10d[?12l[?25h[?25l[?12l[?25h[10;9H[?25l[?12l[?25h<[?25l[?12l[?25hp[?25l[?12l[?25h[36m<p>[39m(B[m[?25l[?12l[?25hㅇ[?25l[?12l[?25h[K[?25l[?12l[?25hD[?25l[?12l[?25hO[?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25hc[?25l[?12l[?25hk[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25h로 [?25l[?12l[?25h실[?25l[?12l[?25h행[?25l[?12l[?25h할 [?25l[?12l[?25h첫 [?25l[?12l[?25h웹[?25l[?12l[?25h페[?25l[?12l[?25h이[?25l[?12l[?25h지[?25l[?12l[?25h입[?25l[?12l[?25h니[?25l[?12l[?25h다[?25l[?12l[?25h.[?25l[?12l[?25h<[?25l[?12l[?25h/[?25l[?12l[?25hp[?25l[?12l[?25h[36m</p>[39m(B[m[?25l[11d[?12l[?25h[?25l[?12l[?25h[11;9H[?25l[?12l[?25h<[?25l[?12l[?25hp[?25l[?12l[?25h[36m<p>[39m(B[m[?25l[?12l[?25h버[?25l[?12l[?25h전[?25l[?12l[?25h:[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h<[?25l[?12l[?25h[36m<ㅔ>[39m(B[m[?25l[?12l[?25h<ㅔ[K[?25l[?12l[?25h[K[?25l[?12l[?25hp[?25l[?12l[?25h[36m<p>[39m(B[m[?25l[12d[?12l[?25h[?25l[?12l[?25h<[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25ho[?25l[?12l[?25hd[?25l[?12l[?25hy[?25l[?12l[?25h[36m</body>[39m(B[m[?25l[13d[?12l[?25h[?25l[?12l[?25h<[?25l[?12l[?25h/[?25l[?12l[?25hh[?25l[?12l[?25ht[?25l[?12l[?25hm[?25l[?12l[?25hl[?25l[?12l[?25h[36m</html>[39m(B[m[?25l[26;16H         (B[0;7mM-D(B[m DOS Format          (B[0;7mM-A(B[m Append[14X[26;73H(B[0;7mM-B(B[m Backup File         (B[0;7m^T(B[m Browse[K[27;2H(B[0;7mC(B[m Cancel[16G         (B[0;7mM-M(B[m Mac Format          (B[0;7mM-P(B[m Prepend             (B[0;7m^Q(B[m Discard buffer[K[26;106H[A(B[0;7mWrite to File: app/index.html                                                                                           [25;30H(B[m[?12l[?25h[?25l[?12l[?25h[?25l[25;53H[1K (B[0;7m[ Writing... ](B[m[K[1;72H(B[0;7m [119G(B[m[25;52H(B[0;7m[ Wrote 12 lines ](B[m[26;16H(B[0;7m^O(B[m Write Out   (B[0;7m^F(B[m Where Is    (B[0;7m^K(B[m Cut         (B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo       (B[0;7mM-A(B[m Set Mark[27;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste       (B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[?12l[?25h[13;8H[?25l[25d[J[27d[?12l[?25h[27;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ cat app/index.html
+[?2004l<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1<p>
+</body>
+</html>
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ nano app/index.t[Khtml
+[?2004l[?2004h[?1049h[22;0;0t[1;27r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[25;54H(B[0;7m[ Reading... ](B[m[25;52H(B[0;7m[ Read 12 lines ](B[m[H(B[0;7m  GNU nano 8.7.1                                        app/index.html                                                  [1;119H(B[m[26d(B[0;7m^G(B[m Help[26;16H(B[0;7m^O(B[m Write Out   (B[0;7m^F(B[m Where Is    (B[0;7m^K(B[m Cut[26;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[27d(B[0;7m^X(B[m Exit[27;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m<!doctype html>[3d<html [31mlang=[32m"ko"[36m>[4d<head>[5;9H<meta charset =[32m"UTF-8"[36m>[6;9H<title>[39m(B[m나의 개발 작업실[36m</title>[7d</head>[8d<body>[9;9H<h1>[39m(B[m나의 코디세이 개발 작업실[36m</h1>[10;9H<p>[39m(B[mDocker로 실행할 첫 웹페이지입니다.[36m</p>[11;9H<p>[39m(B[m버전: 1[36m<p>[12d</body>[13d</html>[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[5;9H[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d  [?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[A [?25l[?12l[?25h[C[?25l[25d[K[?12l[?25h[11;11H[?25l[?12l[?25h[C[?25l[?12l[?25h[14G[?25l[?12l[?25h[16G[?25l[?12l[?25h:[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h[C[?25l[1;72H(B[0;7m*[119G(B[m[?12l[?25h[11;20H[36m/p>[39m(B[m[?25l[?12l[?25h[A[?25l[26;16H         (B[0;7mM-D(B[m DOS Format          (B[0;7mM-A(B[m Append[14X[26;73H(B[0;7mM-B(B[m Backup File         (B[0;7m^T(B[m Browse[K[27;2H(B[0;7mC(B[m Cancel[16G         (B[0;7mM-M(B[m Mac Format          (B[0;7mM-P(B[m Prepend             (B[0;7m^Q(B[m Discard buffer[K[26;106H[A(B[0;7mWrite to File: app/index.html                                                                                           [25;30H(B[m[?12l[?25h[?25l[25;53H[1K (B[0;7m[ Writing... ](B[m[K[1;72H(B[0;7m [119G(B[m[25;52H(B[0;7m[ Wrote 12 lines ](B[m[26;16H(B[0;7m^O(B[m Write Out   (B[0;7m^F(B[m Where Is    (B[0;7m^K(B[m Cut         (B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo       (B[0;7mM-A(B[m Set Mark[27;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste       (B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[?12l[?25h[10;21H[?25l[25d[J[27d[?12l[?25h[27;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ cat app/index.html
+[?2004l<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset ="UTF-8">
+	<title>나의 개발 작업실</title>
+</head>
+<body>
+	<h1>나의 코디세이 개발 작업실</h1>
+	<p>Docker로 실행할 첫 웹페이지입니다.</p>
+	<p>버전: 1</p>
+</body>
+</html>
+[?2004h]0;cedn2@das: ~/codyssey-workshop[01;32mcedn2@das[00m:[01;34m~/codyssey-workshop[00m$ d[Kexit
+[?2004lexit
+
+Script done on 2026-11-03 15:43:12+09:00 [COMMAND_EXIT_CODE="0"]
