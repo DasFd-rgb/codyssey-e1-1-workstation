@@ -62,7 +62,7 @@ docker run -d --name codyssey-web-8080 -p 8080:80 codyssey-web:1.0
 ```
 
 호스트의 8080 포트를 컨테이너의 80 포트에 연결했다.
-브라우저에서 http://localhost:8080에 접속하여
+브라우저에서 http://localhost:8080 에 접속하여
 직접 작성한 웹페이지와 '버전: 1'문구를 확인했다.
 
 접속 증거 :
